@@ -17,6 +17,8 @@ This is cool because you can see where young builders heads are at and see what 
 The scraped raw text alone doesn't mean very much. To identify patterns we have to group them. We can [use GPT to generate embeddings](https://platform.openai.com/docs/guides/embeddings) 
 and then apply standard data analytics practices to these embeddings to numerically explore the generated space. 
 
+Since some ideas were really short, embedding quality can be improved by using GPT to generate an extended description, extrapolating more text from the idea and therefore providing more context to the output embedding. (Each idea was fed to GPT who wrote a short ~1 paragraph description of the idea which was fed to the embedding request alongside the original text)
+
 To generate labels for different themes of ideas, KMeans was used to generate groups of unlabeled points. Then, these aggregated groups titles and descriptions 
 were all fed to GPT to generate an overarching title for the cluster. This was repeated for each group (25 groups) to generate the legend for the map.
 
